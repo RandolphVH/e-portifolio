@@ -60,13 +60,10 @@
  }
 
  .sobre-mim {
-     /* font-size: 25px; */
      margin-top: 190px;
      margin-left: 620px;
-     /* padding-right: 200px; */
      text-align: justify;
      display: block;
-     /* font-weight: 300; */
  }
 
  .titulo-1 {
@@ -81,7 +78,6 @@
      font-size: 30px;
      color: beige;
      text-decoration: none;
-     /* remove a linha */
  }
 
  .menu-text {
