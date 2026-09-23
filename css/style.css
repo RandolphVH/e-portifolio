@@ -14,7 +14,7 @@
   --font-display: 'Oswald', 'Arial Narrow', 'Helvetica Neue', Impact, sans-serif;
   --font-body: 'Fira Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-  --topbar-h: 72px;
+  --topbar-h: 56px;
   --gutter: clamp(20px, 5vw, 72px);
   --radius: 28px;
   --ease: cubic-bezier(.22, .8, .24, 1);
@@ -380,7 +380,7 @@ a { color: inherit; }
 /* ---------- Rodapé ---------- */
 .footer {
   border-top: 1px solid rgba(255, 255, 255, .35);
-  padding: 28px var(--gutter) calc(28px + env(safe-area-inset-bottom, 0px));
+  padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom, 0px));
   text-align: center; font-family: var(--font-display); font-weight: 300;
   font-size: clamp(15px, 1.4vw, 19px); letter-spacing: .02em;
 }
