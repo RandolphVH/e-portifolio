@@ -1,33 +1,217 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Lima</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Victor Lima | Portfólio</title>
+  <meta name="description" content="Portfólio de Victor Lima: administrador em transição para o desenvolvimento de software, com projetos em HTML, CSS e JavaScript.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Victor Lima | Portfólio">
+  <meta property="og:description" content="Projetos e conquistas na minha jornada como desenvolvedor.">
+  <meta property="og:image" content="assets/img/hero-victor.webp">
 
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/reset.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-fundo.webp">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
-    <div class="background"></div>
-    <p class="fade-in">OLÁ, ME CHAMO <span class="destaque">VICTOR LIMA</span><br>MUITO PRAZER!</p>
-    <main class="fade-in2">
-        <div class="seleção">
-            <a href="./sobre.html" id="btnSobreMim">SOBRE MIM</a>
-            <a href="./programacao.html">PROGRAMAÇÃO</a>
-            <a href="">AUDIOVISUAL</a>
+  <a class="skip-link" href="#sobre">Ir para o conteúdo</a>
+
+  <!-- MENU FIXO: desce sozinho quando o menu do início sai da tela -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#inicio">Victor Lima</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="topnav" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="topnav" id="topnav" aria-label="Menu principal">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#programacao">Projetos</a>
+      <a href="#audiovisual">Audiovisual</a>
+    </nav>
+  </header>
+
+  <!-- INÍCIO -->
+  <section class="hero" id="inicio">
+    <div class="hero-media">
+      <img class="hero-bg" src="assets/img/hero-fundo.webp" alt="" width="1920" height="1080" fetchpriority="high">
+      <img class="hero-person" src="assets/img/hero-victor.webp" alt="Retrato em preto e branco de Victor Lima, sorrindo, com números binários ao fundo" width="1920" height="1080" fetchpriority="high">
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-line hero-line--1"><span class="hello">Olá, me chamo</span> <span class="name">Victor Lima</span></span>
+        <span class="hero-line hero-line--2">Muito prazer!</span>
+      </h1>
+      <nav class="hero-nav" id="heroNav" aria-label="Seções do site">
+        <a href="#sobre">Sobre mim</a>
+        <a href="#programacao">Projetos</a>
+        <a href="#audiovisual">Audiovisual</a>
+      </nav>
+    </div>
+
+    <a class="chevron" href="#sobre" aria-label="Rolar para ver mais">
+      <img src="assets/img/icons8-chevron-down-96.png" alt="" aria-hidden="true">
+    </a>
+  </section>
+
+  <main>
+    <!-- APRESENTAÇÃO -->
+    <section class="intro" aria-label="Apresentação profissional">
+      <p class="intro-lead">Desenvolvedor web em transição de carreira, apaixonado por tecnologia e focado em criar interfaces modernas, sempre priorizando responsividade e uma ótima experiência para o usuário.</p>
+      <div class="intro-actions">
+        <a class="intro-btn intro-btn--primary" href="#programacao">Ver projetos <span aria-hidden="true">↘</span></a>
+        <a class="intro-btn" href="#certificado"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L7.5 7.5M12 3l4.5 4.5M4 14v5.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V14"/></svg> Ver certificado</a>
+      </div>
+      <div class="intro-grid" aria-label="Resumo profissional">
+        <article class="intro-card"><span>Projetos</span><strong>12 projetos</strong><p>Trabalhos pessoais e desafios de desenvolvimento</p></article>
+        <article class="intro-card"><span>Base</span><strong>Rio de Janeiro</strong><p>Disponível para oportunidades remotas e presenciais</p></article>
+        <article class="intro-card"><span>Foco</span><strong>Interfaces web</strong><p>Experiências modernas, funcionais e responsivas</p></article>
+        <article class="intro-card"><span>Disponibilidade</span><strong>Em transição</strong><p>Aberto a oportunidades na área de tecnologia</p></article>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section class="section about" id="sobre">
+      <h2 class="section-title">Sobre mim</h2>
+      <p class="about-text">
+        Meu nome é Victor Lima, sou formado em Administração, com especializações em Informática, Inglês e Produção Cinematográfica. Atualmente, estou em transição de carreira para a área de desenvolvimento de software, dedicando-me aos estudos de programação e ao desenvolvimento de projetos. Minha trajetória nas áreas administrativa, hospitalar, audiovisual e marketing digital fortaleceu habilidades como análise de processos, resolução de problemas, organização e adaptação. Busco aplicar esse conhecimento para criar soluções inovadoras e evoluir continuamente na área de tecnologia.
+      </p>
+    </section>
+
+    <!-- PROGRAMAÇÃO -->
+    <section class="section programming" id="programacao">
+      <h2 class="section-title">Projetos</h2>
+      <p class="section-sub">Projetos e conquistas na minha jornada como desenvolvedor</p>
+
+      <ul class="tech" aria-label="Tecnologias que estudo e uso">
+        <li class="tech-item" style="--glow: rgba(247,223,30,.55)">
+          <svg viewBox="0 0 128 128" aria-hidden="true" focusable="false"><path fill="#F7DF1E" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg>
+          <span>JavaScript</span>
+        </li>
+        <li class="tech-item" style="--glow: rgba(228,77,38,.6)">
+          <svg viewBox="0 0 128 128" aria-hidden="true" focusable="false"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
+          <span>HTML5</span>
+        </li>
+        <li class="tech-item" style="--glow: rgba(38,120,230,.6)">
+          <svg viewBox="0 0 128 128" aria-hidden="true" focusable="false"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"/><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"/><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"/></svg>
+          <span>CSS3</span>
+        </li>
+        <li class="tech-item" style="--glow: rgba(243,79,41,.6)">
+          <svg viewBox="0 0 128 128" aria-hidden="true" focusable="false"><path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/></svg>
+          <span>GIT</span>
+        </li>
+      </ul>
+
+      <!-- CERTIFICADO -->
+      <article class="cert" id="certificado">
+        <div class="cert-info">
+          <h3 class="cert-title">Certificação Dev em Dobro</h3>
+          <p class="cert-sub">Semana do Zero ao Programador Contratado</p>
+          <p class="cert-desc">10 horas de treinamento intensivo em HTML, CSS e JavaScript, incluindo projeto prático e refatoração com Inteligência Artificial.</p>
+          <ul class="cert-meta">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+              Junho 2025
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4.5l2.8 1.7M9.5 2.5h5"/></svg>
+              10h de curso
+            </li>
+          </ul>
         </div>
+        <figure class="cert-figure">
+          <img src="assets/img/certificado-dev-em-dobro.webp" alt="Certificado de participação da Semana do Zero ao Programador Contratado, da Dev em Dobro, em nome de Victor Hugo Rosa Lima, com 10 horas de carga horária" width="1600" height="900" loading="lazy">
+        </figure>
+      </article>
 
-    </main>
+      <!-- PROJETOS: cartas empilhadas. Para trocar o link do GitHub, edite o href de cada botão. -->
+      <div class="stack" id="stack" role="list" aria-label="Meus projetos">
 
-    <script src="./src/js/fade.js"></script>
+        <article class="project-card" role="listitem" style="--i:0">
+          <div class="project-media">
+            <img src="assets/img/projeto-gta.webp" alt="Captura da página clone do GTA VI, com a grade de personagens e o logotipo do jogo" width="1000" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Clone da página oficial do GTA VI</h3>
+            <p class="project-text">Recriação da página oficial do jogo, com a grade de personagens, o logotipo em destaque e as informações de lançamento. O objetivo foi reproduzir o layout com fidelidade e praticar CSS.</p>
+            <ul class="chips" aria-label="Ferramentas usadas">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+            </ul>
+            <a class="btn" href="https://lnkd.in/dCRqvE-4" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Ver no GitHub<span class="sr-only"> (abre em nova aba): Clone do GTA VI</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" style="--i:1">
+          <div class="project-media">
+            <img src="assets/img/projeto-syntaxwear.webp" alt="Captura da página inicial da loja SyntaxWear, com banner de tênis e categorias de produtos" width="1000" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">SyntaxWear</h3>
+            <p class="project-text">Página inicial de uma loja fictícia de calçados, com menu de navegação, banner principal e vitrine de categorias: Casual, Esporte, Moderno e Futurista.</p>
+            <ul class="chips" aria-label="Ferramentas usadas">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+            </ul>
+            <a class="btn" href="https://lnkd.in/dyh-MCg6" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Ver no GitHub<span class="sr-only"> (abre em nova aba): SyntaxWear</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" style="--i:2">
+          <div class="project-media">
+            <img src="assets/img/projeto-conselhos.webp" alt="Captura do Gerador de Conselhos, com um cartão exibindo uma frase e o botão do dado" width="1000" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Gerador de Conselhos</h3>
+            <p class="project-text">Aplicação que mostra um conselho aleatório a cada clique no botão do dado. Desafio do Frontend Mentor para praticar consumo de API e manipulação do DOM.</p>
+            <ul class="chips" aria-label="Ferramentas usadas">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>API</li>
+            </ul>
+            <a class="btn" href="https://lnkd.in/dd4p4qjy" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Ver no GitHub<span class="sr-only"> (abre em nova aba): Gerador de Conselhos</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" role="listitem" style="--i:3">
+          <div class="project-media">
+            <img src="assets/img/projeto-huddle.webp" alt="Captura da landing page Huddle, com a frase Build The Community Your Fans Will Love e a ilustração de duas telas" width="1000" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Desafio da Landing Page Huddle do Frontend Mentor</h3>
+            <p class="project-text">Landing page com ilustração, texto de apresentação e botão de cadastro, construída a partir de um desafio do Frontend Mentor, com layout responsivo.</p>
+            <ul class="chips" aria-label="Ferramentas usadas">
+              <li>HTML5</li><li>CSS3</li><li>Layout responsivo</li>
+            </ul>
+            <a class="btn" href="https://lnkd.in/dj6qyFDT" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Ver no GitHub<span class="sr-only"> (abre em nova aba): Huddle</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- AUDIOVISUAL (a planejar) -->
+    <section class="section audiovisual" id="audiovisual">
+      <h2 class="section-title">Audiovisual</h2>
+      <p class="section-sub">Em breve, meus trabalhos de produção audiovisual estarão aqui.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="ano">2025</span> - Todos os direitos reservados | Victor Lima</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>
