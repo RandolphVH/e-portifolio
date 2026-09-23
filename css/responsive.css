@@ -1,0 +1,73 @@
+/* ==========================================================
+   Responsivo
+   ========================================================== */
+
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: 50% 1fr; }
+}
+
+@media (max-width: 820px) {
+  :root { --radius: 22px; }
+
+  .cert { grid-template-columns: 1fr; }
+  .cert-figure { order: -1; }
+
+  .stack { --stack-top: calc(var(--topbar-h) + 12px); --peek: 12px; }
+  .project-card { grid-template-columns: 1fr; min-height: 0; margin-bottom: 14vh; }
+  .project-media { aspect-ratio: 5 / 3; }
+  .project-body { gap: 12px; padding: 22px 22px 26px; }
+}
+
+@media (max-width: 720px) {
+  :root { --topbar-h: 64px; }
+
+  .menu-toggle { display: flex; }
+  .topnav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    padding: 6px var(--gutter) 14px;
+    background: rgba(0, 0, 0, .96);
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    opacity: 0; visibility: hidden; transform: translateY(-8px);
+    transition: opacity .25s, transform .3s var(--ease), visibility 0s linear .3s;
+  }
+  .topnav.open { opacity: 1; visibility: visible; transform: none; transition: opacity .25s, transform .3s var(--ease), visibility 0s; }
+  .topnav a { padding: 14px 0; font-size: 16px; }
+  .topnav a::after { display: none; }
+
+  .about-text { text-align: left; }
+}
+
+@media (max-width: 720px), (orientation: portrait) {
+  .hero { grid-template-columns: 1fr; align-items: end; }
+  .hero-media {
+    inset: 0 0 auto 0; height: 62vh; height: 62svh;
+    -webkit-mask-image: linear-gradient(#000 68%, transparent);
+            mask-image: linear-gradient(#000 68%, transparent);
+  }
+  .hero-media img { object-position: 6% 0%; }
+  .hero-content { grid-column: 1; padding: 0 var(--gutter) calc(11svh + 40px); text-align: center; }
+  .hero-line--1 { justify-content: center; }
+  .hero-nav { justify-content: center; margin-top: 26px; }
+}
+@media (max-width: 720px) {
+  .hero-nav a { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-delay: 0s !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-delay: 0s !important;
+    transition-duration: .01ms !important;
+  }
+  .chevron img { animation: none; }
+}
+
+@media (max-width: 560px) {
+  .intro-grid { grid-template-columns: 1fr; }
+  .intro-actions { align-items: stretch; }
+  .intro-btn { flex: 1 1 100%; }
+}
