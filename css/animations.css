@@ -12,7 +12,6 @@
   to { transform: translate3d(2%, 1%, 0) scale(1.04); opacity: .82; }
 }
 
-.hero-bg      { animation: fadeIn 1s ease-out both; }
 .hero-person  { animation: imageSettle 1.35s var(--ease) .2s both; transform-origin: 20% 40%; }
 .hero-line--1 { animation: riseIn .72s var(--ease) .58s both; }
 .hero-line--2 { animation: riseIn .72s var(--ease) .76s both; }
