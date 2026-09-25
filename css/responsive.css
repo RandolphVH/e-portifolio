@@ -16,6 +16,8 @@
   .project-card { grid-template-columns: 1fr; min-height: 0; margin-bottom: 14vh; }
   .project-media { aspect-ratio: 5 / 3; }
   .project-body { gap: 12px; padding: 22px 22px 26px; }
+  .project-detail-list { grid-template-columns: 1fr; gap: 18px; }
+  .project-dialog-fact--wide { grid-column: auto; }
 }
 
 @media (max-width: 720px) {
