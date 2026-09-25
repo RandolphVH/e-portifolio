@@ -45,7 +45,15 @@
     -webkit-mask-image: linear-gradient(#000 68%, transparent);
             mask-image: linear-gradient(#000 68%, transparent);
   }
-  .hero-media img { object-position: 6% 0%; }
+  .hero-media picture,
+  .hero-media img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+  }
+  .hero-media picture img,
+  .hero-media img {
+    object-fit: cover; object-position: 50% 16%;
+    filter: contrast(1.14) brightness(1.08) saturate(1.05);
+  }
   .hero-content { grid-column: 1; padding: 0 var(--gutter) calc(11svh + 40px); text-align: center; }
   .hero-line--1 { justify-content: center; }
   .hero-nav { justify-content: center; margin-top: 26px; }
