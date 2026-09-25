@@ -166,8 +166,11 @@
   font-weight: 500; font-size: 15px; line-height: 1;
   transition: transform .25s var(--ease), box-shadow .25s var(--ease), background-color .25s;
 }
-.project-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.project-actions { display: flex; flex-wrap: nowrap; gap: 8px; margin-top: 6px; }
+.project-actions > .btn { padding-inline: 14px; }
 .project-actions .btn { margin-top: 0; }
+.project-action-links { display: flex; flex-wrap: nowrap; gap: 8px; }
+.project-action-links .btn-secondary { padding-inline: 12px; }
 .btn-secondary {
   border: 1px solid var(--gold-line); background: transparent; color: var(--white);
   font: 500 15px/1 var(--font-body); cursor: pointer;
@@ -203,6 +206,11 @@
 .project-dialog-fact dt { color: var(--yellow); font-family: var(--font-display); font-size: 18px; font-weight: 500; }
 .project-dialog-fact dd { margin: 6px 0 0; color: rgba(255, 255, 255, .82); line-height: 1.55; }
 .project-dialog-fact .chips { margin-top: 10px; }
+
+@media (max-width: 360px) {
+  .project-actions { flex-wrap: wrap; }
+  .project-action-links { flex-wrap: wrap; }
+}
 
 .audiovisual { min-height: 42vh; padding-top: clamp(96px, 14vw, 180px); }
 .audiovisual .section-sub { color: var(--muted); }
