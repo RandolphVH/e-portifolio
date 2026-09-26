@@ -111,6 +111,22 @@
   text-align: justify; hyphens: auto; -webkit-hyphens: auto;
 }
 
+.contact {
+  position: relative; overflow: hidden;
+  background: linear-gradient(115deg, #101512, #080a09 58%, #12120b);
+}
+.contact::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(135deg, transparent 0 34px, rgba(255,255,255,.025) 35px 36px);
+}
+.contact > * { position: relative; }
+.contact-content {
+  max-width: 960px; margin: clamp(32px, 4vw, 56px) auto 0;
+  display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 6vw, 84px); align-items: center;
+}
+.contact-prompt { margin: 0; max-width: 25rem; color: rgba(255,255,255,.78); font-size: clamp(18px, 1.8vw, 24px); line-height: 1.5; }
+.contact-links { display: grid; gap: 12px; }
+
 .footer {
   border-top: 1px solid rgba(255, 255, 255, .35);
   padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom, 0px));
