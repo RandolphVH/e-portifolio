@@ -11,6 +11,7 @@
   from { transform: translate3d(-2%, -1%, 0) scale(.96); opacity: .48; }
   to { transform: translate3d(2%, 1%, 0) scale(1.04); opacity: .82; }
 }
+@keyframes typingCursor { to { visibility: hidden; } }
 
 .hero-person  { animation: imageSettle 1.35s var(--ease) .2s both; transform-origin: 20% 40%; }
 .hero-line--1 { animation: riseIn .72s var(--ease) .58s both; }

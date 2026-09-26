@@ -8,6 +8,35 @@
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
 
+  var techWord = document.getElementById('introTechWord');
+  if (techWord && !reduceMotion) {
+    var technologies = ['HTML5 + CSS3 + JavaScript + Git', 'Consumo de APIs', 'Manipulação do DOM', 'Profissional em transição', 'Desenvolvedor Front-end Júnior'];
+    var technologyIndex = 0;
+    var characterIndex = technologies[0].length;
+    var deletingTechnology = true;
+
+    function typeTechnology() {
+      var technology = technologies[technologyIndex];
+      characterIndex += deletingTechnology ? -1 : 1;
+      techWord.textContent = technology.slice(0, characterIndex);
+
+      if (characterIndex === 0) {
+        deletingTechnology = false;
+        technologyIndex = (technologyIndex + 1) % technologies.length;
+        window.setTimeout(typeTechnology, 240);
+        return;
+      }
+      if (characterIndex === technology.length) {
+        deletingTechnology = true;
+        window.setTimeout(typeTechnology, 1400);
+        return;
+      }
+      window.setTimeout(typeTechnology, deletingTechnology ? 55 : 105);
+    }
+
+    window.setTimeout(typeTechnology, 1400);
+  }
+
   /* ---------- Menu fixo: desce quando o menu do início sai da tela ---------- */
   var topbar = document.getElementById('topbar');
   var heroNav = document.getElementById('heroNav');
